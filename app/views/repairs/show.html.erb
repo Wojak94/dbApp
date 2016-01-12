@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bike:</strong>
+  <%= @repair.bike_id %>
+</p>
+
+<p>
+  <strong>Serviceman:</strong>
+  <%= @repair.serviceman_id %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @repair.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @repair.end_time %>
+</p>
+
+<p>
+  <strong>Repair status:</strong>
+  <%= @repair.repair_status %>
+</p>
+
+<%= link_to 'Edit', edit_repair_path(@repair) %> |
+<%= link_to 'Back', repairs_path %>

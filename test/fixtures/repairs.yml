@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bike_id: 1
+  serviceman_id: 1
+  start_time: 2016-01-12 17:43:23
+  end_time: 2016-01-12 17:43:23
+  repair_status: MyString
+
+two:
+  bike_id: 1
+  serviceman_id: 1
+  start_time: 2016-01-12 17:43:23
+  end_time: 2016-01-12 17:43:23
+  repair_status: MyString

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160112013030) do
+ActiveRecord::Schema.define(version: 20160112164323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20160112013030) do
     t.integer  "location_id"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+    t.string   "type"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -40,6 +41,11 @@ ActiveRecord::Schema.define(version: 20160112013030) do
     t.string   "postcode"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "operators", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "rents", force: :cascade do |t|
@@ -53,6 +59,16 @@ ActiveRecord::Schema.define(version: 20160112013030) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "repairs", force: :cascade do |t|
+    t.integer  "bike_id"
+    t.integer  "serviceman_id"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.string   "repair_status"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "reports", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "operator_id"
@@ -60,6 +76,12 @@ ActiveRecord::Schema.define(version: 20160112013030) do
     t.text     "report_content"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+  end
+
+  create_table "servicemen", force: :cascade do |t|
+    t.string   "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "stations", force: :cascade do |t|
