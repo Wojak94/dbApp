@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @rent.user_id %>
+</p>
+
+<p>
+  <strong>Bike:</strong>
+  <%= @rent.bike_id %>
+</p>
+
+<p>
+  <strong>Rent place:</strong>
+  <%= @rent.rent_place %>
+</p>
+
+<p>
+  <strong>Return place:</strong>
+  <%= @rent.return_place %>
+</p>
+
+<p>
+  <strong>Rent time:</strong>
+  <%= @rent.rent_time %>
+</p>
+
+<p>
+  <strong>Return time:</strong>
+  <%= @rent.return_time %>
+</p>
+
+<%= link_to 'Edit', edit_rent_path(@rent) %> |
+<%= link_to 'Back', rents_path %>

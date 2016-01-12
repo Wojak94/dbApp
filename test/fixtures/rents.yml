@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  bike_id: 1
+  rent_place: 1
+  return_place: 1
+  rent_time: 2016-01-12 01:35:41
+  return_time: 2016-01-12 01:35:41
+
+two:
+  user_id: 1
+  bike_id: 1
+  rent_place: 1
+  return_place: 1
+  rent_time: 2016-01-12 01:35:41
+  return_time: 2016-01-12 01:35:41
