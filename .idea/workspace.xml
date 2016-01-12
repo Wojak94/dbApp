@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e782e5d9-2e29-4d92-a6a7-f89101fb8eb0" name="Default" comment="">
+    <list default="true" id="e782e5d9-2e29-4d92-a6a7-f89101fb8eb0" name="Default" comment="model stacji">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/stations.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/stations.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/stations_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/stations_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/station.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/stations/_form.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/stations/edit.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/stations/index.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/stations/index.json.jbuilder" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/stations/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/stations/show.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/stations/show.json.jbuilder" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20160112002837_create_stations.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/controllers/stations_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/stations.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/models/station_test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/location.rb" afterPath="$PROJECT_DIR$/app/models/location.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20160112000257_create_locations.rb" afterPath="$PROJECT_DIR$/db/migrate/20160112000257_create_locations.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="dbApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -567,6 +578,13 @@
       <option name="number" value="Default" />
       <updated>1452552122474</updated>
     </task>
+    <task id="LOCAL-00001" summary="model stacji">
+      <created>1452558566917</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1452558566917</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -595,6 +613,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="model stacji" />
+    <option name="LAST_COMMIT_MESSAGE" value="model stacji" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

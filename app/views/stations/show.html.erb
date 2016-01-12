@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @station.location_id %>
+</p>
+
+<p>
+  <strong>Bike quantity:</strong>
+  <%= @station.bike_quantity %>
+</p>
+
+<%= link_to 'Edit', edit_station_path(@station) %> |
+<%= link_to 'Back', stations_path %>
