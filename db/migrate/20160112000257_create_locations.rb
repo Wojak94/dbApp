@@ -2,7 +2,7 @@ class CreateLocations < ActiveRecord::Migration
   def change
     create_table :locations do |t|
       t.string :street
-      t.integer :flat_number
+      t.string :flat_number
       t.string :city
       t.string :postcode
 
