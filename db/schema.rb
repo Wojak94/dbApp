@@ -11,10 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160112000257) do
+ActiveRecord::Schema.define(version: 20160112013030) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bikes", force: :cascade do |t|
+    t.integer  "station_id"
+    t.string   "bike_status"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "employees", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "password"
+    t.string   "password_confirmation"
+    t.integer  "location_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
 
   create_table "locations", force: :cascade do |t|
     t.string   "street"
@@ -23,6 +40,33 @@ ActiveRecord::Schema.define(version: 20160112000257) do
     t.string   "postcode"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "rents", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "bike_id"
+    t.integer  "rent_place"
+    t.integer  "return_place"
+    t.datetime "rent_time"
+    t.datetime "return_time"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "reports", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "operator_id"
+    t.datetime "report_time"
+    t.text     "report_content"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "stations", force: :cascade do |t|
+    t.integer  "location_id"
+    t.integer  "bike_quantity"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "users", force: :cascade do |t|
