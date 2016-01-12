@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  operator_id: 1
+  report_time: 2016-01-12 01:47:06
+  report_content: MyText
+
+two:
+  user_id: 1
+  operator_id: 1
+  report_time: 2016-01-12 01:47:06
+  report_content: MyText
