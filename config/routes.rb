@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   resources :stations
   resources :locations
   resources :users
+
+  get 'bikes' => 'bikes#index'
+  get 'users' => 'users#index'
+  get 'rents' => 'rents#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
