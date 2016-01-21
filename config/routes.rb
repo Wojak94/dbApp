@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :repairs
   resources :operators
   resources :servicemen
@@ -10,9 +11,13 @@ Rails.application.routes.draw do
   resources :locations
   resources :users
 
+  root 'homepage#index'
+
+  get 'signup' => 'signup#index'
   get 'bikes' => 'bikes#index'
   get 'users' => 'users#index'
   get 'rents' => 'rents#index'
+  get 'homepage' => 'homepage#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

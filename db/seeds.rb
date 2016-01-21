@@ -8,3 +8,29 @@
 
 
 
+
+2.times do |n|
+  name  = Faker::Name.first_name
+  surname = Faker::Name.last_name
+  emailx = Faker::Internet.email
+  pass = Faker::Internet.password
+  str = Faker::Address.street_name
+
+  @location = Location.create!(
+      street: str,
+
+
+  )
+
+  @usr = User.create!(
+      first_name:  name,
+      last_name: surname,
+      email: emailx,
+      password: pass,
+      location_id: @location.id,
+  )
+
+
+
+
+end
