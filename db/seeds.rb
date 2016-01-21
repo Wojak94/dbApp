@@ -9,28 +9,28 @@
 
 
 
-2.times do |n|
-  name  = Faker::Name.first_name
-  surname = Faker::Name.last_name
-  emailx = Faker::Internet.email
-  pass = Faker::Internet.password
-  str = Faker::Address.street_name
 
-  @location = Location.create!(
-      street: str,
+def make_stations
+  5.times do
+      #locations
+      str = Faker::Address.street_name
+      flt = Faker::Address.building_number
+      ct = Faker::Address.city
+      psc = Faker::Address.postcode
+      mn = Faker::Number.decimal(2,2)
+      #stations
+      bq = Faker::Number.digit
 
+      @location = Location.create!(
+          street: str,
+          flat_number: flt,
+          city: ct,
+          postcode: psc,
+      )
 
-  )
-
-  @usr = User.create!(
-      first_name:  name,
-      last_name: surname,
-      email: emailx,
-      password: pass,
-      location_id: @location.id,
-  )
-
-
-
-
+      @station = Station.create!(
+          bike_quantity:  bq,
+          location_id: @location.id,
+      )
+  end
 end

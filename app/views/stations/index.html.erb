@@ -14,7 +14,7 @@
   <tbody>
     <% @stations.each do |station| %>
       <tr>
-        <td><%= station.location_id %></td>
+        <td><%= station.location.street %> <%= station.location.flat_number %></td>
         <td><%= station.bike_quantity %></td>
         <td><%= link_to 'Show', station %></td>
         <td><%= link_to 'Edit', edit_station_path(station) %></td>
