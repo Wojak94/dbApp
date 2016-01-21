@@ -5,4 +5,6 @@ class Station < ActiveRecord::Base
 
   $station_capacity = 10
 
+  validates :bike_quantity, presence: true, numericality: {:less_than_or_equal_to => $station_capacity}
+
 end
