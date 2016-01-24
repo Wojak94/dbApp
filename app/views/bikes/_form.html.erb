@@ -11,10 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
+   <div class="field">
     <%= f.label :station_id %><br>
-    <%= f.number_field :station_id %>
-  </div>
+    <%= f.collection_select(:station_id, Station.where("bike_quantity <= ?", 9), :id, :ulica) %>
+   </div>
+
   <div class="field">
     <%= f.label :bike_status %><br>
     <%= f.text_field :bike_status %>

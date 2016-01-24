@@ -4,4 +4,5 @@ class Location < ActiveRecord::Base
   has_one :station
 
   accepts_nested_attributes_for :user
+  accepts_nested_attributes_for :station
 end

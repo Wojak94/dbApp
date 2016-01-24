@@ -1,7 +1,7 @@
 namespace :db do
   task :make_users => :environment do
 
-    1.times do
+    1000.times do
 
       #users
       name = Faker::Name.first_name
@@ -15,6 +15,7 @@ namespace :db do
       ct = Faker::Address.city
       psc = Faker::Address.postcode
       mn = Faker::Number.decimal(2, 2)
+
 
       @location = Location.create!(
           street: str,
@@ -31,6 +32,8 @@ namespace :db do
           money_status: mn,
           location_id: @location.id,
       )
+
+
     end
   end
 end

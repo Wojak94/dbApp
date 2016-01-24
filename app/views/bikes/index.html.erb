@@ -1,7 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Bikes</h1>
-
 <table>
   <thead>
     <tr>
@@ -14,7 +12,7 @@
   <tbody>
     <% @bikes.each do |bike| %>
       <tr>
-        <td><%= bike.station_id %></td>
+        <td><%= bike.station.location.street %> <%= bike.station.location.flat_number %></td>
         <td><%= bike.bike_status %></td>
         <td><%= link_to 'Show', bike %></td>
         <td><%= link_to 'Edit', edit_bike_path(bike) %></td>

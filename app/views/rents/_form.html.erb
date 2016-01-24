@@ -1,41 +1,44 @@
 <%= form_for(@rent) do |f| %>
-  <% if @rent.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@rent.errors.count, "error") %> prohibited this rent from being saved:</h2>
+    <% if @rent.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@rent.errors.count, "error") %> prohibited this rent from being saved:</h2>
 
-      <ul>
-      <% @rent.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @rent.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :user_id %><br>
+      <%= f.collection_select(:user_id, User.all, :id, :first_name, :prompt => "Wybierz osobę") %>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.collection_select(:user_id, User.all, :id, :first_name, :prompt => "Wybierz osobę") %>
-  </div>
-  <div class="field">
-    <%= f.label :bike_id %><br>
-    <%= f.number_field :bike_id %>
-  </div>
-  <div class="field">
-    <%= f.label :rent_place %><br>
-    <%= f.number_field :rent_place %>
-  </div>
-  <div class="field">
-    <%= f.label :return_place %><br>
-    <%= f.number_field :return_place %>
-  </div>
-  <div class="field">
-    <%= f.label :rent_time %><br>
-    <%= f.datetime_select :rent_time %>
-  </div>
-  <div class="field">
-    <%= f.label :return_time %><br>
-    <%= f.datetime_select :return_time %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <%= f.label :rent_place %><br>
+      <%= f.collection_select(:rent_place, Station.where("bike_quantity > ?", 0), :id, :ulica, :prompt => "Wybierz stacje", :id => "station_select") %>
+    </div>
+
+    <div class="field">
+      <%= f.label :bike_id %><br>
+      <%= f.collection_select(:bike_id, Bike.all, :id, :id, :prompt => "Wybierz rower", :id => "bikes_select") %>
+    </div>
+
+    <div class="field">
+      <%= f.label :return_place %><br>
+      <%= f.collection_select(:return_place, Station.where("bike_quantity < ?", 10), :id, :ulica, :prompt => "Wybierz stacje") %>
+    </div>
+    <div class="field">
+      <%= f.label :rent_time %><br>
+      <%= f.datetime_select :rent_time %>
+    </div>
+    <div class="field">
+      <%= f.label :return_time %><br>
+      <%= f.datetime_select :return_time %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>

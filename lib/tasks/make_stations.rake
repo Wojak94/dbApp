@@ -1,14 +1,14 @@
 namespace :db do
   task :make_stations => :environment do
 
-      5.times do
+      30.times do
         #locations
         str = Faker::Address.street_name
         flt = Faker::Address.building_number
         ct = Faker::Address.city
         psc = Faker::Address.postcode
         #stations
-        bq = Faker::Number.between(0,0)
+        bq = Faker::Number.between(0,10)
 
         @location = Location.create!(
             street: str,

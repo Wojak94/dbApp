@@ -5,6 +5,14 @@ class Station < ActiveRecord::Base
 
   $station_capacity = 10
 
-  validates :bike_quantity, presence: true, numericality: {:less_than_or_equal_to => $station_capacity}
+  #validates :bike_quantity, presence: true, numericality: {:less_than_or_equal_to => $station_capacity}
+
+  def ulica
+    location.street
+  end
+
+  #after_initialize do
+  #  self.bike_quantity = 0
+  # end
 
 end

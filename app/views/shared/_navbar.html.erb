@@ -21,6 +21,8 @@
           <li <% if params[:controller] == 'users' %>class="active"<% end %>><%= link_to "Użytkownicy", users_path %></li>
           <li <% if params[:controller] == 'bikes' %>class="active"<% end %>><%= link_to "Rowery", bikes_path %></li>
           <li <% if params[:controller] == 'rents' %>class="active"<% end %>><%= link_to "Wypożyczenia", rents_path %></li>
+          <li <% if params[:controller] == 'stations' %>class="active"<% end %>><%= link_to "Stacje", stations_path %></li>
+          <li <% if params[:controller] == 'locations' %>class="active"<% end %>><%= link_to "Lokalizacje", locations_path %></li>
         <% end %>
         <% end %>
       </ul>

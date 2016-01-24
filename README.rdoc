@@ -24,5 +24,14 @@ Things you may want to cover:
 * ...
 
 
+
+
+technologie użyte w aplikacji
+frameworki
+diagram przypadków użycia (co się udało zaprogramować)
+przykład jednego formularza (screena + fragment kodu)
+fragment modelu
+
+
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.

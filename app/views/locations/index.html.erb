@@ -1,10 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Locations</h1>
-
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Street</th>
       <th>Flat number</th>
       <th>City</th>
@@ -16,6 +15,7 @@
   <tbody>
     <% @locations.each do |location| %>
       <tr>
+        <td><%= location.id %></td>
         <td><%= location.street %></td>
         <td><%= location.flat_number %></td>
         <td><%= location.city %></td>
