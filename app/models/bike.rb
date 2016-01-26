@@ -3,8 +3,14 @@ class Bike < ActiveRecord::Base
   has_many :rents
   has_many :repairs
 
+  accepts_nested_attributes_for :rents
+
   after_destroy :decrement_bike_quantity
   after_create :increment_bike_quantity
+
+  def station_id=(id)
+    write_attribute(:station_id, id)
+  end
 
 
   private

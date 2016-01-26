@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'top_users/new'
+
+  get 'top_users/create'
+
   resources :repairs
   resources :operators
   resources :servicemen

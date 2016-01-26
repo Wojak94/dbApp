@@ -18,7 +18,7 @@ class RentsControllerTest < ActionController::TestCase
 
   test "should create rent" do
     assert_difference('Rent.count') do
-      post :create, rent: { bike_id: @rent.bike_id, rent_place: @rent.rent_place, rent_time: @rent.rent_time, return_place: @rent.return_place, return_time: @rent.return_time, user_id: @rent.user_id }
+      post :create, rent: {bike_id: @rent.bike_id, rent_place: @rent.rent_place, rent_time: @rent.rent_time, return_place: @rent.return_place, return_time: @rent.return_time, user_id: @rent.user_id }
     end
 
     assert_redirected_to rent_path(assigns(:rent))
@@ -35,7 +35,7 @@ class RentsControllerTest < ActionController::TestCase
   end
 
   test "should update rent" do
-    patch :update, id: @rent, rent: { bike_id: @rent.bike_id, rent_place: @rent.rent_place, rent_time: @rent.rent_time, return_place: @rent.return_place, return_time: @rent.return_time, user_id: @rent.user_id }
+    patch :update, id: @rent, rent: {bike_id: @rent.bike_id, rent_place: @rent.rent_place, rent_time: @rent.rent_time, return_place: @rent.return_place, return_time: @rent.return_time, user_id: @rent.user_id }
     assert_redirected_to rent_path(assigns(:rent))
   end
 

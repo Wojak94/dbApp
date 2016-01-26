@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160112180000) do
+ActiveRecord::Schema.define(version: 20160126200508) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,12 +51,12 @@ ActiveRecord::Schema.define(version: 20160112180000) do
   create_table "rents", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "bike_id"
-    t.integer  "rent_place"
-    t.integer  "return_place"
+    t.integer  "rent_place_id"
+    t.integer  "return_place_id"
     t.datetime "rent_time"
     t.datetime "return_time"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "repairs", force: :cascade do |t|

@@ -17,10 +17,10 @@
   <tbody>
     <% @rents.each do |rent| %>
       <tr>
-        <td><%= rent.user_id %></td>
+        <td><%= rent.user.full_name %></td>
         <td><%= rent.bike_id %></td>
-        <td><%= rent.rent_place %></td>
-        <td><%= rent.return_place %></td>
+        <td><%= rent.rent_place.location.street %></td>
+        <td><%= rent.return_place.location.street %></td>
         <td><%= rent.rent_time %></td>
         <td><%= rent.return_time %></td>
         <td><%= link_to 'Show', rent %></td>

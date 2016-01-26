@@ -69,6 +69,6 @@ class RentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rent_params
-      params.require(:rent).permit(:user_id, :bike_id, :rent_place, :return_place, :rent_time, :return_time)
+      params.require(:rent).permit(:user_id, :bike_id, :rent_place_id, :return_place_id, :rent_time, :return_time)
     end
 end

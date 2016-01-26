@@ -13,12 +13,12 @@
 
     <div class="field">
       <%= f.label :user_id %><br>
-      <%= f.collection_select(:user_id, User.all, :id, :first_name, :prompt => "Wybierz osobę") %>
+      <%= f.collection_select(:user_id, User.all, :id, :full_name, :prompt => "Wybierz osobę") %>
     </div>
 
     <div class="field">
-      <%= f.label :rent_place %><br>
-      <%= f.collection_select(:rent_place, Station.where("bike_quantity > ?", 0), :id, :ulica, :prompt => "Wybierz stacje", :id => "station_select") %>
+      <%= f.label :rent_place_id %><br>
+      <%= f.collection_select(:rent_place_id, Station.where("bike_quantity > ?", 0), :id, :ulica, :prompt => "Wybierz stacje", :id => "station_select") %>
     </div>
 
     <div class="field">
@@ -27,8 +27,8 @@
     </div>
 
     <div class="field">
-      <%= f.label :return_place %><br>
-      <%= f.collection_select(:return_place, Station.where("bike_quantity < ?", 10), :id, :ulica, :prompt => "Wybierz stacje") %>
+      <%= f.label :return_place_id %><br>
+      <%= f.collection_select(:return_place_id, Station.where("bike_quantity < ?", 10), :id, :ulica, :prompt => "Wybierz stacje", :id => "station_select") %>
     </div>
     <div class="field">
       <%= f.label :rent_time %><br>
