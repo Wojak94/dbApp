@@ -2,7 +2,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @rent.user_id %>
+  <%= @rent.user.full_name %>
 </p>
 
 <p>
@@ -12,12 +12,12 @@
 
 <p>
   <strong>Rent place:</strong>
-  <%= @rent.rent_place %>
+  <%= @rent.rent_place.location.full_name %>
 </p>
 
 <p>
   <strong>Return place:</strong>
-  <%= @rent.return_place %>
+  <%= @rent.return_place.location.full_name %>
 </p>
 
 <p>

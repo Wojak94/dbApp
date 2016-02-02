@@ -9,13 +9,12 @@ namespace :db do
       em = Faker::Internet.email
       pass = Faker::Internet.password
 
-      #location1
+      #location
       str = Faker::Address.street_name
       flt = Faker::Address.building_number
       ct = Faker::Address.city
       psc = Faker::Address.postcode
       mn = Faker::Number.decimal(2, 2)
-
 
       @location = Location.create!(
           street: str,
@@ -32,8 +31,6 @@ namespace :db do
           money_status: mn,
           location_id: @location.id,
       )
-
-
     end
   end
 end
